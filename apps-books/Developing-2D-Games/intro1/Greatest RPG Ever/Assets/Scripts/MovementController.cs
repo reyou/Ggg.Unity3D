@@ -5,8 +5,11 @@ public class MovementController : MonoBehaviour
     public float movementSpeed = 3.0f;
     Vector2 movement;
     private Rigidbody2D rb2D;
+
+    // animator is the controller (not action methods)
     private Animator animator;
 
+    // name of the parameter
     private string animationState = "AnimationState";
 
     enum CharStates
@@ -27,6 +30,8 @@ public class MovementController : MonoBehaviour
 
     void Update()
     {
+        // we use update typically for getting user input
+        // because fixed update can miss user input
         UpdateState();
     }
 
@@ -50,22 +55,27 @@ public class MovementController : MonoBehaviour
 
     private void UpdateState()
     {
+        // horizontal right
         if (movement.x > 0)
         {
             animator.SetInteger(animationState, (int)CharStates.walkEast);
         }
+        // horizontal left
         else if (movement.x < 0)
         {
             animator.SetInteger(animationState, (int)CharStates.walkWest);
         }
+        // vertical up
         else if (movement.y > 0)
         {
             animator.SetInteger(animationState, (int)CharStates.walkNorth);
         }
+        // vertical down
         else if (movement.y < 0)
         {
             animator.SetInteger(animationState, (int)CharStates.walkSouth);
         }
+        // idle south
         else
         {
             animator.SetInteger(animationState, (int)CharStates.idleSouth);
