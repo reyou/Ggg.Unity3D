@@ -250,6 +250,9 @@ GameObject:
   - component: {fileID: 620078758}
   - component: {fileID: 620078760}
   - component: {fileID: 620078759}
+  - component: {fileID: 620078761}
+  - component: {fileID: 620078763}
+  - component: {fileID: 620078762}
   m_Layer: 0
   m_Name: Layer_Trees_and_Rocks
   m_TagString: Untagged
@@ -775,6 +778,65 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &620078761
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620078757}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
+--- !u!66 &620078762
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620078757}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths: []
+  m_CompositePaths:
+    m_Paths: []
+  m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.00005
+--- !u!50 &620078763
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620078757}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &669654464
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,6 +889,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4875616275325193569, guid: a5f1b5a84118f3042af020c6b30096a7,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.5673787
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875616275325193569, guid: a5f1b5a84118f3042af020c6b30096a7,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.84473103
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875616275325193569, guid: a5f1b5a84118f3042af020c6b30096a7,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.00087204576
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875616275325193569, guid: a5f1b5a84118f3042af020c6b30096a7,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.07763448
+      objectReference: {fileID: 0}
     - target: {fileID: 4875616275325193570, guid: a5f1b5a84118f3042af020c6b30096a7,
         type: 3}
       propertyPath: m_RootOrder
@@ -891,6 +973,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayerID
       value: -578190381
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875616275325193574, guid: a5f1b5a84118f3042af020c6b30096a7,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4875616275325193597, guid: a5f1b5a84118f3042af020c6b30096a7,
         type: 3}
@@ -1133,6 +1220,16 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 3105883269041717576, guid: bdea016fab34e0842bba092766776cac,
         type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3105883269041717576, guid: bdea016fab34e0842bba092766776cac,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -578190381
+      objectReference: {fileID: 0}
+    - target: {fileID: 3105883269041717576, guid: bdea016fab34e0842bba092766776cac,
+        type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
@@ -1190,6 +1287,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3105883269041717581, guid: bdea016fab34e0842bba092766776cac,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdea016fab34e0842bba092766776cac, type: 3}
