@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Ground
+  - CanBePickedUp
   layers:
   - Default
   - TransparentFX
@@ -15,8 +17,8 @@ TagManager:
   - 
   - 
   - Blocking
-  - 
-  - 
+  - Consumables
+  - Enemies
   - 
   - 
   - 
